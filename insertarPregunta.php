@@ -34,7 +34,7 @@
     
     $sql = "INSERT INTO preguntas VALUES ('','$_POST[textoEmail]','$_POST[textoPregunta]','$_POST[textoCorrecto]','$_POST[textoIncorrecto1]','$_POST[textoIncorrecto2]','$_POST[textoIncorrecto3]','$_POST[textoComplejidad]','$_POST[textoTema]','')";
     if (!mysqli_query($link,$sql)){
-        die ("Pulsa en REPETIR para intentarlo de nuevo </br> <input type='button' value = 'REPETIR' onclick='history.back'()">);
+        die ("Pulsa en REPETIR para intentarlo de nuevo </br> <input type='button' value = 'REPETIR' onclick='history.back'()>");
 		
     }
     echo "Añadida una nueva fila";
