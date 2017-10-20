@@ -37,11 +37,12 @@
         die ("Pulsa en REPETIR para intentarlo de nuevo </br> <input type='button' value = 'REPETIR' onclick='history.back'()>");
 		
     }
-    echo "Añadida una nueva fila";
+	echo "Añadida una nueva fila </br>";
     echo "Pulsa aqui para ver todos los datos: ";
     echo '</br>';
     echo '<a href="verPreguntas.php">Ver preguntas</a>';
     echo '</br>';
+    echo "Pulsa aqui para volver a insertar otra pregunta: ";
     echo '<input type="button" value="VOLVER ATRÁS" name="atras" onclick="history.back()" />';
 mysqli_close($link);
 
