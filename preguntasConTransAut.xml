@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-
+<?xml-stylesheet type="text/xsl" href="verPreguntas.xsl"?>
 <assessmentItems>
 	<assessmentItem complexity="2" subject="Web" author="jvadillo001@ikasle.ehu.es">
 		<itemBody>
@@ -32,4 +32,4 @@
 			<value> Ninguna es correcta </value>
 		</incorrectResponses>
 	</assessmentItem>
-<assessmentItem complexity="2" subject="tema1" author="aalfageme001@ikasle.ehu.eus"><itemBody><p>preguntaa1</p></itemBody><correctResponse><value>correcta1</value></correctResponse><incorrectResponses><value>incorrecta11</value><value>incorrecta12</value><value>incorrecta13</value></incorrectResponses></assessmentItem><assessmentItem complexity="5" subject="tema2" author="aalfageme001@ikasle.ehu.eus"><itemBody><p>preguntaa2</p></itemBody><correctResponse><value>correcta2</value></correctResponse><incorrectResponses><value>incorrecta21</value><value>incorrecta22</value><value>incorrecta23</value></incorrectResponses></assessmentItem></assessmentItems>
+</assessmentItems>
