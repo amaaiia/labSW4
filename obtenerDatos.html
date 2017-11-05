@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Consulta los datos del alumno a través del correo</title>
+</head>
+<body style="text-align:center;">
+<script type="text/javascript" src='https://code.jquery.com/jquery-3.2.1.js'></script>
+<script type="text/javascript">
+
+	
+
+	$(document).ready(function() {
+		function borrarCampos(){
+			$('#nombre').val('');
+			$('#ap1').val('');
+			$('#ap2').val('');
+			$('#tlfn').val('');
+		}
+		
+		$('#boton').click(function(){
+		
+			var correo = $('#correo').val();
+			$.get('usuarios.xml', function(d){
+				var listausuarios = $(d).find('usuario');
+				var listacorreos = $(d).find('email');
+				var listanombres = $(d).find('nombre');
+				var listaapellidos1 = $(d).find('apellido1');
+				var listaapellidos2 = $(d).find('apellido2');
+				var listatelefonos = $(d).find('telefono');
+				var encontrado = false;
+				for (var i = 0; i < listausuarios.length; i++)
+				{
+					if (correo == listacorreos[i].childNodes[0].nodeValue){
+						encontrado = true;
+						$('#nombre').val(listanombres[i].childNodes[0].nodeValue);
+						$('#ap1').val(listaapellidos1[i].childNodes[0].nodeValue);
+						$('#ap2').val(listaapellidos2[i].childNodes[0].nodeValue);
+						$('#tlfn').val(listatelefonos[i].childNodes[0].nodeValue);
+					}
+				}
+				if (!encontrado){
+					$('#error').text('Ese alumno no existe, prueba de nuevo');
+					borrarCampos();
+				} else {
+					$('#error').text('');
+				}
+			});
+		
+		});
+	});
+	</script>
+
+	<br/><br/><br/>
+<form action="">
+Introduce correo electronico: <br/>
+<input type="text" id="correo"/><br/>
+Nombre: <br/>
+<input type="text" id="nombre" readonly/><br/>
+Primer apellido: <br/>
+<input type="text" id="ap1" readonly/><br/>
+Segundo apellido: <br/>
+<input type="text" id="ap2" readonly/><br/>
+Telefono: <br/>
+<input type="text" id="tlfn" readonly/><br/>
+<input type="button" id="boton" value="Autocompletar"/>
+
+<br/><br/><br/>
+<label id="error"/>
+
+</form>
+</body>
+</html> 

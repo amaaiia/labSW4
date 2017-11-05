@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="verPreguntas.xsl"?>
+<assessmentItems>
+	<assessmentItem complexity="2" subject="Web" author="jvadillo001@ikasle.ehu.es">
+		<itemBody>
+			<p>Tag HTML para a&#xF1;adir un formulario</p>
+		</itemBody>
+		<correctResponse>
+			<value>
+				FORM
+			</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value> OBJECT </value>
+			<value> TABLE </value>
+			<value> DIV </value>
+		</incorrectResponses>
+	</assessmentItem>
+		<assessmentItem complexity="4" subject="Internet" author="rarruabarrena001@ikasle.ehu.eus">
+		<itemBody>
+			<p>Este protocolo acabar&#xE1; funcionando
+			incluso entre dos latas unidas por un cord&#xF3;n</p>
+		</itemBody>
+		<correctResponse>
+			<value>
+				TCP/IP
+			</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value> HTTP </value>
+			<value> SMTP </value>
+			<value> Ninguna es correcta </value>
+		</incorrectResponses>
+	</assessmentItem>
+2<assessmentItem complexity="4" subject="tema1" author="aaa123@ikasle.ehu.eus"><itemBody><p>pregunta1</p></itemBody><correctResponse><value>correcta1</value></correctResponse><incorrectResponses><value>incorrecta11</value><value>incorrecta12</value><value>incorrecta13</value></incorrectResponses></assessmentItem><assessmentItem complexity="4" subject="tema2" author="bbb123@ikasle.ehu.eus"><itemBody><p>pregunta2</p></itemBody><correctResponse><value>correcta2</value></correctResponse><incorrectResponses><value>incorrecta21</value><value>incorrecta22</value><value>incorrecta23</value></incorrectResponses></assessmentItem><assessmentItem complexity="3" subject="tema3" author="ccc123@ikasle.ehu.eus"><itemBody><p>pregunta3</p></itemBody><correctResponse><value>correcta3</value></correctResponse><incorrectResponses><value>incorrecta31</value><value>incorrecta32</value><value>incorrecta33</value></incorrectResponses></assessmentItem><assessmentItem complexity="4" subject="tema4" author="ddd123@ikasle.ehu.eus"><itemBody><p>pregunta4</p></itemBody><correctResponse><value>correcta4</value></correctResponse><incorrectResponses><value>incorrecta41</value><value>incorrecta42</value><value>incorrecta43</value></incorrectResponses></assessmentItem><assessmentItem complexity="1" subject="temaaaaa" author="amaia123@ikasle.ehu.eus"><itemBody><p>pregunta de amaia</p></itemBody><correctResponse><value>respuestaaaa</value></correctResponse><incorrectResponses><value>incorrectaaaa</value><value>incorrectaaaa2</value><value>incorrectaaa3</value></incorrectResponses></assessmentItem><assessmentItem complexity="1" subject="temaaaaa" author="amaiaaa123@ikasle.ehu.eus"><itemBody><p>pregunta de amaia</p></itemBody><correctResponse><value>respuestaaaa</value></correctResponse><incorrectResponses><value>incorrectaaaa</value><value>incorrectaaaa2</value><value>incorrectaaa3</value></incorrectResponses></assessmentItem><assessmentItem complexity="1" subject="temaaaaa" author="ana123@ikasle.ehu.eus"><itemBody><p>pregunta de ana</p></itemBody><correctResponse><value>respuestaaaa</value></correctResponse><incorrectResponses><value>incorrectaaaa</value><value>incorrectaaaa2</value><value>incorrectaaa3</value></incorrectResponses></assessmentItem><assessmentItem complexity="1" subject="temaaaaa" author="anaa123@ikasle.ehu.eus"><itemBody><p>pregunta de ana</p></itemBody><correctResponse><value>respuestaaaa</value></correctResponse><incorrectResponses><value>incorrectaaaa</value><value>incorrectaaaa2</value><value>incorrectaaa3</value></incorrectResponses></assessmentItem><assessmentItem complexity="1" subject="temaaaaa" author="anaaaa123@ikasle.ehu.eus"><itemBody><p>pregunta de ana</p></itemBody><correctResponse><value>respuestaaaa</value></correctResponse><incorrectResponses><value>incorrectaaaa</value><value>incorrectaaaa2</value><value>incorrectaaa3</value></incorrectResponses></assessmentItem><assessmentItem complexity="1" subject="temaaaaa" author="addnaaaa123@ikasle.ehu.eus"><itemBody><p>pregunta de ana</p></itemBody><correctResponse><value>respuestaaaa</value></correctResponse><incorrectResponses><value>incorrectaaaa</value><value>incorrectaaaa2</value><value>incorrectaaa3</value></incorrectResponses></assessmentItem><assessmentItem complexity="2" subject="temaJokin" author="jortega001@ikasle.ehu.eus"><itemBody><p>preguntaJokin</p></itemBody><correctResponse><value>correctaJokin</value></correctResponse><incorrectResponses><value>incorrectaJokin1</value><value>incorrectaJokin2</value><value>incorrectaJokin3</value></incorrectResponses></assessmentItem></assessmentItems>
