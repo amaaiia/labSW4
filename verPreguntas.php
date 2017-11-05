@@ -1,6 +1,6 @@
 
 		<?php
-    $link = mysqli_connect("localhost","root","root","quiz");
+   $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");
     $datos = mysqli_query($link,"select * from preguntas");
     echo '<table border=1 style = "width:auto" > <tr> <th> NUMERO_PREGUNTA </th> <th> EMAIL  </th> <th> PREGUNTA </th> <th> RESPUESTA CORRECTA  </th>  <th> INCORRECTA1  </th> <th> INCORRECTA2  </th> <th> INCORRECTA3  </th> <th> COMPLEJIDAD  </th> <th> TEMA  </th> <th> IMAGEN  </th> </tr>';
     while ($row = mysqli_fetch_array($datos)){

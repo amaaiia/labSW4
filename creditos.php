@@ -30,6 +30,7 @@
 		<span><a href='pregunta.php' id = "preguntas" style="display:none">Preguntas</a></span>
 		<span><a href='creditos.php' id="creditos" >Creditos</a></span>
     <span><a href='verPreguntas.php' id="verPreguntas" style="display:none;">Ver preguntas</a></span>
+    <span><a href='verPreguntasXML.php' id="verPreguntasXML" style="display:none;">Ver preguntas XML</a></span>
 	</nav>
     <section class="main" id="s1">
     
@@ -54,6 +55,7 @@
     $('.right').hide();
     $('#layout').hide();
     $('#verPreguntas').show();
+    $('#verPreguntasXML').show();
     $('#logout').show();
     $('#preguntas').show();
     $('#usuarioMostrar').text("Bienvenido/a " + nombre);
@@ -65,7 +67,7 @@
 <?php
 function logueado(){
   $email = $_GET['usuario'];
-  $link = mysqli_connect("localhost","root","root","quiz");
+  $link = mysqli_connect("localhost","id2920920_amaiajokin","amaiajokin","id2920920_quiz");
   $sql = "select * from usuarios where email = '$email'";
   $resul = mysqli_query($link,$sql);
   $datos = mysqli_fetch_array($resul);

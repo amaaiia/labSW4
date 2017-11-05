@@ -29,6 +29,7 @@
 		<span><a href='pregunta.php' id="preguntas">Preguntas</a></span>
 		<span><a href='creditos.php' id="creditos">Creditos</a></span>
     <span><a href='verPreguntas.php' id="verPreguntas">Ver preguntas</a></span>
+    <span><a href='verPreguntasXML.php' id="verPreguntasXML">Ver preguntas XML</a></span>
 	</nav>
     <section class="main" id="s1">
     
@@ -63,7 +64,7 @@
       </br>
       <label id="mensajeXML" style="font-size: 30px;"></label>
       </br>
-      <a href='preguntas.xml' id="verXML" style="display:none"> Clic aquí para visualización XML</a>
+      <a href='verPreguntasXML.php' id="verXML" style="display:none"> Clic aquí para visualización XML</a>
 		</form>
     
     
@@ -114,7 +115,7 @@
 
 function logueado(){
   $email = $_GET['usuario'];
-  $link = mysqli_connect("localhost","root","root","quiz");
+  $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");
   $sql = "select * from usuarios where email = '$email'";
   $resul = mysqli_query($link,$sql);
   $datos = mysqli_fetch_array($resul);
@@ -167,7 +168,7 @@ if (isset($_GET['usuario'])){
     
     if (!isset($error)) {
 
-      $link = mysqli_connect("localhost","root","root","quiz");
+      $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");
       $nombre_img = $_FILES['archivos']['name'];
       logueado();
 

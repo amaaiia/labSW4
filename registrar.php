@@ -28,6 +28,7 @@
 		<span><a href='layout.html' id="layout">Inicio</a></span>
 		<span><a href='pregunta.php' style="display:none;" id="preguntas">Preguntas</a></span>
 		<span><a href='creditos.php' id="creditos">Creditos</a></span>
+		
 	</nav>
     <section class="main" id="s1">
     
@@ -134,7 +135,7 @@
     
     
     if (!isset($error)) {
-      $link = mysqli_connect("localhost","root","root","quiz");
+      $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");
       $nombre_img = $_FILES['archivos']['name'];
       
       //Si existe imagen y tiene un tamaño correcto
@@ -147,7 +148,7 @@
 	   || ($_FILES["archivos"]["type"] == "image/png"))
 	   {
 		  // Ruta donde se guardarán las imágenes que subamos
-		  $directorio = $_SERVER['DOCUMENT_ROOT'].'LabSW3/imagenes/';
+		  $directorio = $_SERVER['DOCUMENT_ROOT'].'/LabSW3/imagenes/';
 		  // Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
 		  move_uploaded_file($_FILES['archivos']['tmp_name'],$directorio.$nombre_img);
 		} 
@@ -176,7 +177,7 @@
 <?php
 function logueado(){
   $email = $_GET['usuario'];
-  $link = mysqli_connect("localhost","root","root","quiz");
+  $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");
   $sql = "select * from usuarios where email = '$email'";
   $resul = mysqli_query($link,$sql);
   $datos = mysqli_fetch_array($resul);

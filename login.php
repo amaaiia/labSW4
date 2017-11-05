@@ -29,6 +29,7 @@
 		<span><a href='pregunta.php' style="display:none" id="preguntas">Preguntas</a></span>
 		<span><a href='creditos.php' id="creditos" >Creditos</a></span>
     <span><a href='verPreguntas.php' id="verPreguntas" style="display:none">Ver preguntas</a></span>
+    <span><a href='verPreguntasXML.php' id="verPreguntasXML" style="display:none">Ver preguntas XML</a></span>
 	</nav>
     <section class="main" id="s1">
     
@@ -63,6 +64,7 @@
     $('#layout').hide();
     $('#logout').show();
     $('#verPreguntas').show();
+    $('#verPreguntasXML').show();
     $('#preguntas').show();
     $('#usuarioMostrar').text("Bienvenido/a " + nombre);
     $('#logueadoImagen').html('<img src="imagenes/'+imagen+'" style="height:60px;width:auto" />');
@@ -75,7 +77,7 @@ if (isset ($_POST['loginEmail'])){
     $usuario =  $_POST['loginEmail'];
     $pass =  $_POST['loginPassword'];
     
-    $link = mysqli_connect("localhost","root","root","quiz");
+    $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");
     $sql = "select * from usuarios where email = '$usuario' and contrasena='$pass'";
     
     $usuarios = mysqli_query($link,$sql);
