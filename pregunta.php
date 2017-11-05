@@ -93,6 +93,17 @@
       $("#vista_previa").html("El navegador no soporta vista previa");
     }
       $("#archivos").on('change', seleccionArchivo);
+   
+
+	
+  function logueado(nombre,imagen){
+    $('.right').hide();
+    $('#logout').show();
+    $('#layout').hide();
+    $('#preguntas').show();
+    $('#usuarioMostrar').text("Bienvenido/a " + nombre);
+    $('#logueadoImagen').html('<img src="imagenes/'+imagen+'" style="height:60px;width:auto" />');
+  }
   
   </script>
 
@@ -120,6 +131,7 @@ if (isset($_GET['usuario'])){
   }
 
 ?>
+
 
 <?php
     if(isset($_POST['textoEmail']))
@@ -170,10 +182,10 @@ if (isset($_GET['usuario'])){
            || ($_FILES["archivos"]["type"] == "image/png"))
            {
             // Ruta donde se guardarán las imágenes que subamos
-            $directorio = $_SERVER['DOCUMENT_ROOT'].'LabSW2Bseg/imagenes/';
+            $directorio = $_SERVER['DOCUMENT_ROOT'].'/LabSW3/imagenes/';
             // Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
             move_uploaded_file($_FILES['archivos']['tmp_name'],$directorio.$nombre_img);
-            } 
+          } 
           else 
           {
              //si no cumple con el formato
@@ -181,7 +193,6 @@ if (isset($_GET['usuario'])){
           }
         }
         
-          
           $sql = "INSERT INTO preguntas VALUES ('','$_POST[textoEmail]','$_POST[textoPregunta]','$_POST[textoCorrecto]','$_POST[textoIncorrecto1]','$_POST[textoIncorrecto2]','$_POST[textoIncorrecto3]','$_POST[textoComplejidad]','$_POST[textoTema]','$nombre_img')";
           if (!mysqli_query($link,$sql)){
               die ("Pulsa en REPETIR para intentarlo de nuevo </br> <input type='button' value = 'REPETIR' onclick='history.back()'>");
@@ -190,32 +201,35 @@ if (isset($_GET['usuario'])){
           $mens="Añadida una nueva pregunta a SQL";
           echo "<script> $('#mensaje').text('$mens');</script>";
           mysqli_close($link);
+          
+          //xml:
+          if($xml = simplexml_load_file('preguntas.xml')){
+            $item = $xml->addChild('assessmentItem');
+            $item->addAttribute('complexity',  $_POST['textoComplejidad']);
+            $item->addAttribute('subject', $_POST['textoTema']);
+            $item->addAttribute('author', $_POST['textoEmail']);
+            $itemBody = $item->addChild('itemBody');
+            $p = $itemBody->addChild('p',$_POST['textoPregunta']);
+            $correcta = $item->addChild('correctResponse');
+            $valueCorrecta = $correcta->addChild('value',$_POST['textoCorrecto']);
+            $incorrectas = $item->addChild('incorrectResponses');
+            $valueIncorrecta1 = $incorrectas->addChild('value',$_POST['textoIncorrecto1']);
+            $valueIncorrecta2 = $incorrectas->addChild('value',$_POST['textoIncorrecto2']);
+            $valueIncorrecta3 = $incorrectas->addChild('value',$_POST['textoIncorrecto3']);
+            $xml->asXML('preguntas.xml');
+            $link = "<a href='preguntas.xml'> Clic aquí para visualización XML</a>";
+            echo "<script> $('#mensajeXML').text('La inserción en XML ha sido correcta');</script>";
+            echo "<script>  $('#verXML').toggle(); </script>";
+          } else {
+            echo "<script> $('#mensajeXML').text('Se ha producido algún error a la hora de insertar en XML');</script>";  
+          }
     } else {
           echo "<script> $('#error').text('$error');</script>";
     }
-    //xml:
-    if($xml = simplexml_load_file('preguntas.xml')){
-      $item = $xml->addChild('assessmentItem');
-      $item->addAttribute('complexity',  $_POST['textoComplejidad']);
-      $item->addAttribute('subject', $_POST['textoTema']);
-      $item->addAttribute('author', $_POST['textoEmail']);
-      $itemBody = $item->addChild('itemBody');
-      $p = $itemBody->addChild('p',$_POST['textoPregunta']);
-      $correcta = $item->addChild('correctResponse');
-      $valueCorrecta = $correcta->addChild('value',$_POST['textoCorrecto']);
-      $incorrectas = $item->addChild('incorrectResponses');
-      $valueIncorrecta1 = $incorrectas->addChild('value',$_POST['textoIncorrecto1']);
-      $valueIncorrecta2 = $incorrectas->addChild('value',$_POST['textoIncorrecto2']);
-      $valueIncorrecta3 = $incorrectas->addChild('value',$_POST['textoIncorrecto3']);
-      $xml->asXML('preguntas.xml');
-      $link = "<a href='preguntas.xml'> Clic aquí para visualización XML</a>";
-      echo "<script> $('#mensajeXML').text('La inserción en XML ha sido correcta');</script>";
-      echo "<script>  $('#verXML').toggle(); </script>";
-    } else {
-      echo "<script> $('#mensajeXML').text('Se ha producido algún error a la hora de insertar en XML');</script>";  
-    }
+    
     
   
     }
     
   ?>
+
