@@ -115,7 +115,7 @@
      } else if(!preg_match("/^([a-z])+(\d{3})+\@((ikasle.ehu)+\.)+(es|eus)+$/", $email)){
         $error = "El email no cumple el formato especificado";
         $code = 1;
-     } else if ((mysqli_num_rows(mysqli_query(mysqli_connect("localhost","root","","quiz"),"select * from usuarios where email='$email'"))) == 1) {
+     } else if ((mysqli_num_rows(mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz"),"select * from usuarios where email='$email'"))) == 1) {
         $error = "El email $email ya existe";
         $code = 1;
      } else if(str_word_count($nombre,0)<2) {
