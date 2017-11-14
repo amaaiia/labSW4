@@ -1,35 +1,4 @@
 <?xml version="1.0"?>
-
 <assessmentItems>
-	<assessmentItem complexity="2" subject="Web" author="jvadillo001@ikasle.ehu.es">
-		<itemBody>
-			<p>Tag HTML para a&#xF1;adir un formulario</p>
-		</itemBody>
-		<correctResponse>
-			<value>
-				FORM
-			</value>
-		</correctResponse>
-		<incorrectResponses>
-			<value> OBJECT </value>
-			<value> TABLE </value>
-			<value> DIV </value>
-		</incorrectResponses>
-	</assessmentItem>
-		<assessmentItem complexity="4" subject="Internet" author="rarruabarrena001@ikasle.ehu.eus">
-		<itemBody>
-			<p>Este protocolo acabar&#xE1; funcionando
-			incluso entre dos latas unidas por un cord&#xF3;n</p>
-		</itemBody>
-		<correctResponse>
-			<value>
-				TCP/IP
-			</value>
-		</correctResponse>
-		<incorrectResponses>
-			<value> HTTP </value>
-			<value> SMTP </value>
-			<value> Ninguna es correcta </value>
-		</incorrectResponses>
-	</assessmentItem>
-<assessmentItem complexity="2" subject="tema1" author="aalfageme001@ikasle.ehu.eus"><itemBody><p>preguntaa1</p></itemBody><correctResponse><value>correcta1</value></correctResponse><incorrectResponses><value>incorrecta11</value><value>incorrecta12</value><value>incorrecta13</value></incorrectResponses></assessmentItem><assessmentItem complexity="5" subject="tema2" author="aalfageme001@ikasle.ehu.eus"><itemBody><p>preguntaa2</p></itemBody><correctResponse><value>correcta2</value></correctResponse><incorrectResponses><value>incorrecta21</value><value>incorrecta22</value><value>incorrecta23</value></incorrectResponses></assessmentItem></assessmentItems>
+	
+</assessmentItems>

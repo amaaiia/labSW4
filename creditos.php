@@ -67,7 +67,7 @@
 <?php
 function logueado(){
   $email = $_GET['usuario'];
-  $link = mysqli_connect("localhost","id2920920_amaiajokin","amaiajokin","id2920920_quiz");
+  $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");
   $sql = "select * from usuarios where email = '$email'";
   $resul = mysqli_query($link,$sql);
   $datos = mysqli_fetch_array($resul);

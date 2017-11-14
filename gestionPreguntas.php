@@ -209,7 +209,6 @@
 </html>
 
 <?php
-header("Cache-Control: no-store, no-cache, must-revalidate");
 function logueado(){
   $email = $_GET['usuario'];
   $link = mysqli_connect("localhost","id2920920_amaiajokin","","id2920920_quiz");

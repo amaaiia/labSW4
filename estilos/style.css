@@ -7,8 +7,8 @@ body						{font: 16px Georgia, serif;}
 						 margin-bottom: 5px; color: black;}
 
 
-#n1                      {height: 600px; border-radius: 20px;}   
-#s1                     {height: 600px; border-radius: 20px;}
+#n1                      {height: 1500px; border-radius: 20px;}   
+#s1                     {height: 1500px; border-radius: 20px;}
 section > div				{padding: 50px; }
 header, nav, section		{background: #74edf1; text-align: center;}
 footer					{background: #74edf1; text-align: center;}

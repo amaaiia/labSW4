@@ -30,6 +30,7 @@
 		<span><a href='creditos.php' id="creditos" >Creditos</a></span>
     <span><a href='verPreguntas.php' id="verPreguntas" style="display:none">Ver preguntas</a></span>
     <span><a href='verPreguntasXML.php' id="verPreguntasXML" style="display:none">Ver preguntas XML</a></span>
+    <span><a href='gestionarPreguntas.php' id="gestionar" style = "display:none" >Gestionar preguntas</a></span>
 	</nav>
     <section class="main" id="s1">
     
@@ -65,6 +66,7 @@
     $('#logout').show();
     $('#verPreguntas').show();
     $('#verPreguntasXML').show();
+    $('#gestionar').show();
     $('#preguntas').show();
     $('#usuarioMostrar').text("Bienvenido/a " + nombre);
     $('#logueadoImagen').html('<img src="imagenes/'+imagen+'" style="height:60px;width:auto" />');
@@ -92,6 +94,7 @@ if (isset ($_POST['loginEmail'])){
         echo "<script> logueado('$nom','$img'); $('#formLogin').hide(); $('#mensaje').show();</script></br>";
         echo "<script>$('#preguntas').attr('href','pregunta.php?usuario=$usuario'); </script>";
         echo "<script>$('#creditos').attr('href','creditos.php?usuario=$usuario'); </script>";
+        echo "<script> $('#gestionar').attr('href','gestionPreguntas.php?usuario=$usuario');</script>";   
     }
     else{
       $mensaje = "Usuario o contraseña incorrectos, intentalo de nuevo"; 

@@ -165,7 +165,7 @@
 		
     }
     $email = $_POST['textoEmail'];
-    echo "<script> window.location.href = 'pregunta.php?usuario=$email';</script>";
+    echo "<script> window.location.href = 'gestionPreguntas.php?usuario=$email';</script>";
   	echo "Añadido nuevo usuario </br>";
     mysqli_close($link);
     } else {
@@ -184,8 +184,8 @@ function logueado(){
   $nombre = $datos['nombre'];
   $img = $datos['foto'];
   echo "<script> logueado('$nombre','$img'); $('#textoEmail').attr('value','$email'); $('#textoEmail').attr('readonly','readonly');</script>";
-  echo "<script> $('#fpreguntas').attr('action','pregunta.php?usuario=$email'); </script>";
-  echo "<script> $('#preguntas').attr('href','pregunta.php?usuario=$email'); </script>";
+  echo "<script> $('#fpreguntas').attr('action','gestionPreguntas.php?usuario=$email'); </script>";
+  echo "<script> $('#preguntas').attr('href','preguntas.php?usuario=$email'); </script>";
   echo "<script> $('#creditos').attr('href','creditos.php?usuario=$email'); </script>";
   mysqli_close($link);
 }
